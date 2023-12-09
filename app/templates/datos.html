@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <p><a href="/logout">Cerrar sesion</a></p>
+    <head>
+        <title>Consulta de datos</title>
+        <style>
+            table, th, td {
+                border: 1px solid black;
+                padding: .2em;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <thead>
+              <tr>
+                <th>nombre</th>
+                <th>apellidos</th>
+                <th>DNI</th>
+                <th>Género</th>
+                <th>Carnet Profeional</th>       
+                <th>Fecha de Nacimiento</th>
+                <th>Telefono</th>
+                <th>Email</th>
+                <th>escalafon</th>
+                <th>situacion_servicio</th>
+                <th>grado</th>
+                <th>categoria_profesional</th>
+                <th>equivalencia_titulo</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for row in result %}
+                <tr>
+                    {% for item in row %}
+                        <td>{{ item }}</td>
+                    {% endfor %}
+                {% endfor %}
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
